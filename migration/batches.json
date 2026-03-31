@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "recommendedFirstBatchId": "batch-1",
+  "batches": [
+    {
+      "id": "batch-1",
+      "name": "Product listing surface",
+      "status": "queued",
+      "risk": "medium",
+      "whyGrouped": "Shared product-domain components, filters, and data modeling with nullable/optional fields.",
+      "files": [
+        "src/components/ProductCard.jsx",
+        "src/features/products/ProductGrid.jsx",
+        "src/features/products/ProductFilters.jsx",
+        "src/features/products/useProductFilters.js",
+        "src/features/products/data.js"
+      ]
+    },
+    {
+      "id": "batch-2",
+      "name": "Cart and checkout UI",
+      "status": "not_started",
+      "risk": "high",
+      "whyGrouped": "Reducer/context behavior and checkout flow are tightly coupled and should migrate together.",
+      "files": [
+        "src/features/cart/CartContext.jsx",
+        "src/features/cart/CartDrawer.jsx",
+        "src/features/cart/CheckoutForm.jsx",
+        "src/components/CartSummary.jsx",
+        "src/pages/StorefrontPage.jsx"
+      ]
+    },
+    {
+      "id": "batch-3",
+      "name": "Shared utilities and admin wiring",
+      "status": "not_started",
+      "risk": "medium",
+      "whyGrouped": "Shared utility typing and remaining integration points can be stabilized once product/cart types exist.",
+      "files": [
+        "src/utils/format.js",
+        "src/utils/filter.js",
+        "src/utils/totals.js",
+        "src/components/Header.jsx",
+        "src/pages/AdminDashboardPage.jsx"
+      ]
+    }
+  ]
+}

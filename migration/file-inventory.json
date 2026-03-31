@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "generatedFromPlan": "MIGRATION_PLAN.md",
+  "files": [
+    {
+      "path": "src/components/ProductCard.jsx",
+      "batchId": "batch-1",
+      "risk": "medium",
+      "status": "queued",
+      "migrated": false
+    },
+    {
+      "path": "src/features/products/ProductGrid.jsx",
+      "batchId": "batch-1",
+      "risk": "low",
+      "status": "queued",
+      "migrated": false
+    },
+    {
+      "path": "src/features/products/ProductFilters.jsx",
+      "batchId": "batch-1",
+      "risk": "medium",
+      "status": "queued",
+      "migrated": false
+    },
+    {
+      "path": "src/features/products/useProductFilters.js",
+      "batchId": "batch-1",
+      "risk": "medium",
+      "status": "queued",
+      "migrated": false
+    },
+    {
+      "path": "src/features/products/data.js",
+      "batchId": "batch-1",
+      "risk": "high",
+      "status": "queued",
+      "migrated": false
+    },
+    {
+      "path": "src/features/cart/CartContext.jsx",
+      "batchId": "batch-2",
+      "risk": "high",
+      "status": "not_started",
+      "migrated": false
+    },
+    {
+      "path": "src/features/cart/CartDrawer.jsx",
+      "batchId": "batch-2",
+      "risk": "medium",
+      "status": "not_started",
+      "migrated": false
+    },
+    {
+      "path": "src/features/cart/CheckoutForm.jsx",
+      "batchId": "batch-2",
+      "risk": "medium",
+      "status": "not_started",
+      "migrated": false
+    },
+    {
+      "path": "src/components/CartSummary.jsx",
+      "batchId": "batch-2",
+      "risk": "low",
+      "status": "not_started",
+      "migrated": false
+    },
+    {
+      "path": "src/pages/StorefrontPage.jsx",
+      "batchId": "batch-2",
+      "risk": "medium",
+      "status": "not_started",
+      "migrated": false
+    },
+    {
+      "path": "src/utils/format.js",
+      "batchId": "batch-3",
+      "risk": "low",
+      "status": "not_started",
+      "migrated": false
+    },
+    {
+      "path": "src/utils/filter.js",
+      "batchId": "batch-3",
+      "risk": "medium",
+      "status": "not_started",
+      "migrated": false
+    },
+    {
+      "path": "src/utils/totals.js",
+      "batchId": "batch-3",
+      "risk": "medium",
+      "status": "not_started",
+      "migrated": false
+    },
+    {
+      "path": "src/components/Header.jsx",
+      "batchId": "batch-3",
+      "risk": "low",
+      "status": "not_started",
+      "migrated": false
+    },
+    {
+      "path": "src/pages/AdminDashboardPage.jsx",
+      "batchId": "batch-3",
+      "risk": "medium",
+      "status": "not_started",
+      "migrated": false
+    }
+  ]
+}
