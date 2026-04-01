@@ -1,7 +1,16 @@
 import { formatMoney } from '../utils/format';
 import { calculateCartTotals } from '../utils/totals';
 
-function CartSummary({ items }) {
+interface CartSummaryItem {
+  price: number;
+  quantity: number;
+}
+
+interface CartSummaryProps {
+  items: CartSummaryItem[];
+}
+
+function CartSummary({ items }: CartSummaryProps) {
   const totals = calculateCartTotals(items);
 
   return (
