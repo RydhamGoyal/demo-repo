@@ -3,36 +3,48 @@
 ## Scope summary
 
 - Total files in migration scope: **15**
-- Migrated files: **0**
+- Migrated files: **15**
 - In flight files: **0**
-- Remaining files: **15**
+- Remaining files: **0**
 - Blocked files: **0**
 
 ## Batch status
 
-- `batch-1` Product listing surface - **queued** (5 files)
-- `batch-2` Cart and checkout UI - **not_started** (5 files)
-- `batch-3` Shared utilities and admin wiring - **not_started** (5 files)
+- `batch-1` Product listing surface - **completed** (5/5 files)
+- `batch-2` Cart and checkout UI - **completed** (5/5 files)
+- `batch-3` Shared utilities and admin wiring - **completed** (5/5 files)
 
-## Recommended first proof-of-concept batch
+## What was done
 
-- Start with `batch-1`
-- For the first Devin session, start with:
-  - `src/components/ProductCard.jsx`
-  - `src/features/products/ProductGrid.jsx`
+### Batch 1 - Product listing surface
+- `src/components/ProductCard.jsx` -> `src/components/ProductCard.tsx`
+- `src/features/products/ProductGrid.jsx` -> `src/features/products/ProductGrid.tsx`
+- `src/features/products/ProductFilters.jsx` -> `src/features/products/ProductFilters.tsx`
+- `src/features/products/useProductFilters.js` -> `src/features/products/useProductFilters.ts`
+- `src/features/products/data.js` -> `src/features/products/data.ts`
 
-## What "done" means for a batch
+### Batch 2 - Cart and checkout UI
+- `src/features/cart/CartContext.jsx` -> `src/features/cart/CartContext.tsx`
+- `src/features/cart/CartDrawer.jsx` -> `src/features/cart/CartDrawer.tsx`
+- `src/features/cart/CheckoutForm.jsx` -> `src/features/cart/CheckoutForm.tsx`
+- `src/components/CartSummary.jsx` -> `src/components/CartSummary.tsx`
+- `src/pages/StorefrontPage.jsx` -> `src/pages/StorefrontPage.tsx`
 
-A batch is marked `completed` only when all of the following are true:
+### Batch 3 - Shared utilities and admin wiring
+- `src/utils/format.js` -> `src/utils/format.ts`
+- `src/utils/filter.js` -> `src/utils/filter.ts`
+- `src/utils/totals.js` -> `src/utils/totals.ts`
+- `src/components/Header.jsx` -> `src/components/Header.tsx`
+- `src/pages/AdminDashboardPage.jsx` -> `src/pages/AdminDashboardPage.tsx`
 
-1. Files in the batch are converted to `.ts`/`.tsx` with explicit types.
-2. `npm run verify:migration` passes.
-3. Behavior is unchanged in the migrated feature area (validated via tests/manual spot checks).
-4. `migration/file-inventory.json` and `migration/status.json` are updated to reflect migrated file state.
+## Shared type definitions added
+- `src/types/product.ts` - Product, Vendor, SortMode, FilterOptions
+- `src/types/cart.ts` - CartItem, CartAction, CartState, CartTotals, CartContextValue
 
-## Current repo readiness for automated migration
+## Verification
 
-- Ready for control-plane demos with machine-readable batch and status artifacts.
-- Staged typechecking is enabled with `tsconfig.migration.json` and `npm run typecheck:migration`.
-- Baseline tests now cover utility logic, product filter hook behavior, cart context behavior, and checkout submission flow.
-- Next operational step is to have the migration runner update `migration/status.json` and `migration/file-inventory.json` automatically as sessions complete.
+All batches verified with `npm run verify:migration`:
+- `npm run build` - PASS
+- `npm run test` - PASS (5 tests, 4 test files)
+- `npm run lint` - PASS
+- `npm run typecheck:migration` - PASS

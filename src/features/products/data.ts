@@ -1,4 +1,6 @@
-export const productCatalog = [
+import { Product } from '../../types/product';
+
+export const productCatalog: Product[] = [
   {
     id: 'p-100',
     sku: 'SD-COF-100',

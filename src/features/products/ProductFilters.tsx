@@ -1,3 +1,15 @@
+import { SortMode } from '../../types/product';
+
+interface ProductFiltersProps {
+  query: string;
+  category: string;
+  sortBy: SortMode;
+  categories: string[];
+  onQueryChange: (value: string) => void;
+  onCategoryChange: (value: string) => void;
+  onSortChange: (value: SortMode) => void;
+}
+
 function ProductFilters({
   query,
   category,
@@ -6,7 +18,7 @@ function ProductFilters({
   onQueryChange,
   onCategoryChange,
   onSortChange
-}) {
+}: ProductFiltersProps) {
   return (
     <section className="card" style={{ marginBottom: 16 }}>
       <div className="grid" style={{ gridTemplateColumns: '2fr 1fr 1fr' }}>
@@ -31,7 +43,7 @@ function ProductFilters({
         </label>
         <label className="stack">
           Sort
-          <select value={sortBy} onChange={(event) => onSortChange(event.target.value)}>
+          <select value={sortBy} onChange={(event) => onSortChange(event.target.value as SortMode)}>
             <option value="featured">Featured</option>
             <option value="price-asc">Price: Low to High</option>
             <option value="price-desc">Price: High to Low</option>

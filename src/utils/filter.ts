@@ -1,6 +1,7 @@
 import { toTitleCase } from './format';
+import { FilterOptions, Product, SortMode } from '../types/product';
 
-export function filterProducts(products, options = {}) {
+export function filterProducts(products: Product[], options: FilterOptions = {}): Product[] {
   const query = options.query?.trim().toLowerCase() || '';
   const category = options.category || 'all';
 
@@ -12,7 +13,7 @@ export function filterProducts(products, options = {}) {
   });
 }
 
-export function sortProducts(products, mode) {
+export function sortProducts(products: Product[], mode: SortMode): Product[] {
   const list = [...products];
 
   switch (mode) {
