@@ -1,6 +1,11 @@
 import { useCart } from '../features/cart/CartContext';
 
-function Header({ activeView, onChangeView }) {
+interface HeaderProps {
+  activeView: string;
+  onChangeView: (view: string) => void;
+}
+
+function Header({ activeView, onChangeView }: HeaderProps) {
   const { itemCount } = useCart();
 
   return (

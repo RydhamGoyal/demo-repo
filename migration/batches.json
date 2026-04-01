@@ -33,7 +33,7 @@
     {
       "id": "batch-3",
       "name": "Shared utilities and admin wiring",
-      "status": "not_started",
+      "status": "completed",
       "risk": "medium",
       "whyGrouped": "Shared utility typing and remaining integration points can be stabilized once product/cart types exist.",
       "files": [
