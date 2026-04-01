@@ -1,3 +1,13 @@
+interface ProductFiltersProps {
+  query: string;
+  category: string;
+  sortBy: string;
+  categories: string[];
+  onQueryChange: (value: string) => void;
+  onCategoryChange: (value: string) => void;
+  onSortChange: (value: string) => void;
+}
+
 function ProductFilters({
   query,
   category,
@@ -6,7 +16,7 @@ function ProductFilters({
   onQueryChange,
   onCategoryChange,
   onSortChange
-}) {
+}: ProductFiltersProps) {
   return (
     <section className="card" style={{ marginBottom: 16 }}>
       <div className="grid" style={{ gridTemplateColumns: '2fr 1fr 1fr' }}>
