@@ -1,7 +1,12 @@
 import { formatMoney } from '../utils/format';
 import { calculateCartTotals } from '../utils/totals';
+import { CartItem } from '../features/cart/CartContext';
 
-function CartSummary({ items }) {
+interface CartSummaryProps {
+  items: CartItem[];
+}
+
+function CartSummary({ items }: CartSummaryProps) {
   const totals = calculateCartTotals(items);
 
   return (
