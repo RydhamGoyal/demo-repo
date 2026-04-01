@@ -1,4 +1,4 @@
-export function formatMoney(value, currency = 'USD') {
+export function formatMoney(value: unknown, currency: string = 'USD'): string {
   const safeValue = typeof value === 'number' ? value : 0;
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -6,7 +6,7 @@ export function formatMoney(value, currency = 'USD') {
   }).format(safeValue);
 }
 
-export function toTitleCase(input) {
+export function toTitleCase(input: string | null | undefined): string {
   if (!input) return '';
   return input
     .split(' ')

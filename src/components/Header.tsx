@@ -1,6 +1,13 @@
 import { useCart } from '../features/cart/CartContext';
 
-function Header({ activeView, onChangeView }) {
+type View = 'storefront' | 'admin';
+
+interface HeaderProps {
+  activeView: View;
+  onChangeView: (view: View) => void;
+}
+
+function Header({ activeView, onChangeView }: HeaderProps) {
   const { itemCount } = useCart();
 
   return (
