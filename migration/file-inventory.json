@@ -73,39 +73,39 @@
       "migrated": true
     },
     {
-      "path": "src/utils/format.js",
+      "path": "src/utils/format.ts",
       "batchId": "batch-3",
       "risk": "low",
-      "status": "not_started",
-      "migrated": false
+      "status": "completed",
+      "migrated": true
     },
     {
-      "path": "src/utils/filter.js",
+      "path": "src/utils/filter.ts",
       "batchId": "batch-3",
       "risk": "medium",
-      "status": "not_started",
-      "migrated": false
+      "status": "completed",
+      "migrated": true
     },
     {
-      "path": "src/utils/totals.js",
+      "path": "src/utils/totals.ts",
       "batchId": "batch-3",
       "risk": "medium",
-      "status": "not_started",
-      "migrated": false
+      "status": "completed",
+      "migrated": true
     },
     {
-      "path": "src/components/Header.jsx",
+      "path": "src/components/Header.tsx",
       "batchId": "batch-3",
       "risk": "low",
-      "status": "not_started",
-      "migrated": false
+      "status": "completed",
+      "migrated": true
     },
     {
-      "path": "src/pages/AdminDashboardPage.jsx",
+      "path": "src/pages/AdminDashboardPage.tsx",
       "batchId": "batch-3",
       "risk": "medium",
-      "status": "not_started",
-      "migrated": false
+      "status": "completed",
+      "migrated": true
     }
   ]
 }
