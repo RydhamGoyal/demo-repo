@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type FormEvent } from 'react';
 import { useCart } from './CartContext';
 
 function CheckoutForm() {
@@ -11,7 +11,7 @@ function CheckoutForm() {
     return items.length > 0 && email.includes('@');
   }, [email, items.length]);
 
-  function onSubmit(event) {
+  function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!canSubmit) return;
 
