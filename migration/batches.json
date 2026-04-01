@@ -19,7 +19,7 @@
     {
       "id": "batch-2",
       "name": "Cart and checkout UI",
-      "status": "not_started",
+      "status": "completed",
       "risk": "high",
       "whyGrouped": "Reducer/context behavior and checkout flow are tightly coupled and should migrate together.",
       "files": [

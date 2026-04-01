@@ -38,39 +38,39 @@
             "migrated": true
     },
     {
-      "path": "src/features/cart/CartContext.jsx",
+      "path": "src/features/cart/CartContext.tsx",
       "batchId": "batch-2",
       "risk": "high",
-      "status": "not_started",
-      "migrated": false
+      "status": "completed",
+      "migrated": true
     },
     {
-      "path": "src/features/cart/CartDrawer.jsx",
+      "path": "src/features/cart/CartDrawer.tsx",
       "batchId": "batch-2",
       "risk": "medium",
-      "status": "not_started",
-      "migrated": false
+      "status": "completed",
+      "migrated": true
     },
     {
-      "path": "src/features/cart/CheckoutForm.jsx",
+      "path": "src/features/cart/CheckoutForm.tsx",
       "batchId": "batch-2",
       "risk": "medium",
-      "status": "not_started",
-      "migrated": false
+      "status": "completed",
+      "migrated": true
     },
     {
-      "path": "src/components/CartSummary.jsx",
+      "path": "src/components/CartSummary.tsx",
       "batchId": "batch-2",
       "risk": "low",
-      "status": "not_started",
-      "migrated": false
+      "status": "completed",
+      "migrated": true
     },
     {
-      "path": "src/pages/StorefrontPage.jsx",
+      "path": "src/pages/StorefrontPage.tsx",
       "batchId": "batch-2",
       "risk": "medium",
-      "status": "not_started",
-      "migrated": false
+      "status": "completed",
+      "migrated": true
     },
     {
       "path": "src/utils/format.js",
