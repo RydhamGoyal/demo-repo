@@ -1,6 +1,12 @@
 import ProductCard from '../../components/ProductCard';
+import { Product } from './data';
 
-function ProductGrid({ products, onAddToCart }) {
+interface ProductGridProps {
+  products: Product[];
+  onAddToCart: (product: Product) => void;
+}
+
+function ProductGrid({ products, onAddToCart }: ProductGridProps) {
   if (products.length === 0) {
     return <p className="muted">No products matched your current filters.</p>;
   }
