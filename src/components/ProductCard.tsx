@@ -1,5 +1,5 @@
-import { formatMoney } from '../utils/format';
 import { Product } from '../features/products/data';
+import { formatMoney } from '../utils/format';
 
 interface ProductCardProps {
   product: Product;
