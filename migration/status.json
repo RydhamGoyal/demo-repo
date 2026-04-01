@@ -4,22 +4,22 @@
   "recommendedFirstBatchId": "batch-1",
   "summary": {
     "totalFilesInScope": 15,
-    "migratedFiles": 0,
-    "remainingFiles": 15,
+        "migratedFiles": 5,
+        "remainingFiles": 10,
     "blockedFiles": 0,
     "batchCounts": {
-      "not_started": 2,
-      "queued": 1,
-      "in_progress": 0,
-      "completed": 0,
+            "not_started": 2,
+            "queued": 0,
+            "in_progress": 0,
+            "completed": 1,
       "blocked": 0
     }
   },
   "batches": [
     {
-      "id": "batch-1",
-      "status": "queued",
-      "migratedFiles": 0,
+            "id": "batch-1",
+            "status": "completed",
+            "migratedFiles": 5,
       "totalFiles": 5
     },
     {
@@ -35,5 +35,5 @@
       "totalFiles": 5
     }
   ],
-  "lastUpdated": "2026-03-31"
+  "lastUpdated": "2026-04-01"
 }

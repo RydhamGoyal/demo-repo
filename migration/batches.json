@@ -3,9 +3,9 @@
   "recommendedFirstBatchId": "batch-1",
   "batches": [
     {
-      "id": "batch-1",
-      "name": "Product listing surface",
-      "status": "queued",
+            "id": "batch-1",
+            "name": "Product listing surface",
+            "status": "completed",
       "risk": "medium",
       "whyGrouped": "Shared product-domain components, filters, and data modeling with nullable/optional fields.",
       "files": [
