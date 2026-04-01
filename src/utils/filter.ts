@@ -1,6 +1,25 @@
 import { toTitleCase } from './format';
 
-export function filterProducts(products, options = {}) {
+export interface Product {
+  id: string;
+  sku: string;
+  name: string;
+  category: string;
+  price: number;
+  inventory: number;
+  description: string | null;
+  vendor: { id: string; name: string; score: number } | null;
+  images: string[];
+}
+
+export interface FilterOptions {
+  query?: string;
+  category?: string;
+}
+
+export type SortMode = 'price-asc' | 'price-desc' | 'inventory-desc' | 'name-asc';
+
+export function filterProducts(products: Product[], options: FilterOptions = {}): Product[] {
   const query = options.query?.trim().toLowerCase() || '';
   const category = options.category || 'all';
 
@@ -12,7 +31,7 @@ export function filterProducts(products, options = {}) {
   });
 }
 
-export function sortProducts(products, mode) {
+export function sortProducts(products: Product[], mode: string): Product[] {
   const list = [...products];
 
   switch (mode) {
