@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react';
 import { filterProducts, sortProducts } from '../../utils/filter';
+import { Product } from './data';
 
-function useProductFilters(products) {
+function useProductFilters(products: Product[]) {
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('all');
   const [sortBy, setSortBy] = useState('featured');

@@ -1,9 +1,12 @@
+import { Product } from '../features/products/data';
 import { formatMoney } from '../utils/format';
 
-/**
- * @type {import('react').FC<{ product: any, onAddToCart: (product: any) => void }>}
- */
-const ProductCard = ({ product, onAddToCart }) => {
+interface ProductCardProps {
+  product: Product;
+  onAddToCart: (product: Product) => void;
+}
+
+const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
   const disabled = product.inventory <= 0;
   const primaryImage = product.images?.[0] || 'https://via.placeholder.com/300x200?text=No+Image';
 
