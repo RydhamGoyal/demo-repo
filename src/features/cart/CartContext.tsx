@@ -1,8 +1,34 @@
-import { createContext, useContext, useMemo, useReducer } from 'react';
+import { createContext, useContext, useMemo, useReducer, type ReactNode } from 'react';
 
-const CartContext = createContext(null);
+interface CartItem {
+  productId: string;
+  name: string;
+  price: number;
+  quantity: number;
+}
 
-function cartReducer(state, action) {
+interface CartState {
+  items: CartItem[];
+}
+
+type CartAction =
+  | { type: 'add-item'; payload: CartItem }
+  | { type: 'remove-item'; payload: { productId: string } }
+  | { type: 'set-quantity'; payload: { productId: string; quantity: number } }
+  | { type: 'clear' };
+
+interface CartContextValue {
+  items: CartItem[];
+  itemCount: number;
+  addItem: (product: { id: string; name: string; price: number }) => void;
+  removeItem: (productId: string) => void;
+  setQuantity: (productId: string, quantity: number) => void;
+  clearCart: () => void;
+}
+
+const CartContext = createContext<CartContextValue | null>(null);
+
+function cartReducer(state: CartState, action: CartAction): CartState {
   switch (action.type) {
     case 'add-item': {
       const existingIndex = state.items.findIndex((item) => item.productId === action.payload.productId);
@@ -42,7 +68,11 @@ function cartReducer(state, action) {
   }
 }
 
-export function CartProvider({ children }) {
+interface CartProviderProps {
+  children: ReactNode;
+}
+
+export function CartProvider({ children }: CartProviderProps) {
   const [state, dispatch] = useReducer(cartReducer, { items: [] });
 
   const value = useMemo(() => {
@@ -51,7 +81,7 @@ export function CartProvider({ children }) {
     return {
       items: state.items,
       itemCount,
-      addItem: (product) =>
+      addItem: (product: { id: string; name: string; price: number }) =>
         dispatch({
           type: 'add-item',
           payload: {
@@ -61,8 +91,8 @@ export function CartProvider({ children }) {
             quantity: 1
           }
         }),
-      removeItem: (productId) => dispatch({ type: 'remove-item', payload: { productId } }),
-      setQuantity: (productId, quantity) =>
+      removeItem: (productId: string) => dispatch({ type: 'remove-item', payload: { productId } }),
+      setQuantity: (productId: string, quantity: number) =>
         dispatch({ type: 'set-quantity', payload: { productId, quantity } }),
       clearCart: () => dispatch({ type: 'clear' })
     };
@@ -71,7 +101,7 @@ export function CartProvider({ children }) {
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
 
-export function useCart() {
+export function useCart(): CartContextValue {
   const context = useContext(CartContext);
   if (!context) {
     throw new Error('useCart must be used within a CartProvider.');
