@@ -3,39 +3,39 @@
   "generatedFromPlan": "MIGRATION_PLAN.md",
   "files": [
     {
-      "path": "src/components/ProductCard.jsx",
-      "batchId": "batch-1",
-      "risk": "medium",
-      "status": "queued",
-      "migrated": false
+            "path": "src/components/ProductCard.tsx",
+            "batchId": "batch-1",
+            "risk": "medium",
+            "status": "completed",
+            "migrated": true
     },
     {
-      "path": "src/features/products/ProductGrid.jsx",
-      "batchId": "batch-1",
-      "risk": "low",
-      "status": "queued",
-      "migrated": false
+            "path": "src/features/products/ProductGrid.tsx",
+            "batchId": "batch-1",
+            "risk": "low",
+            "status": "completed",
+            "migrated": true
     },
     {
-      "path": "src/features/products/ProductFilters.jsx",
-      "batchId": "batch-1",
-      "risk": "medium",
-      "status": "queued",
-      "migrated": false
+            "path": "src/features/products/ProductFilters.tsx",
+            "batchId": "batch-1",
+            "risk": "medium",
+            "status": "completed",
+            "migrated": true
     },
     {
-      "path": "src/features/products/useProductFilters.js",
-      "batchId": "batch-1",
-      "risk": "medium",
-      "status": "queued",
-      "migrated": false
+            "path": "src/features/products/useProductFilters.ts",
+            "batchId": "batch-1",
+            "risk": "medium",
+            "status": "completed",
+            "migrated": true
     },
     {
-      "path": "src/features/products/data.js",
-      "batchId": "batch-1",
-      "risk": "high",
-      "status": "queued",
-      "migrated": false
+            "path": "src/features/products/data.ts",
+            "batchId": "batch-1",
+            "risk": "high",
+            "status": "completed",
+            "migrated": true
     },
     {
       "path": "src/features/cart/CartContext.jsx",
